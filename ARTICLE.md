@@ -1,11 +1,11 @@
 # Éducation en Afrique : ce que révèlent 17 ans de données sur les inégalités d'accès
 
-*Média Marcel Bakayoko — Expert géomatique / données géospatiales & agricoles / GeoAI / Suivi-Évaluation*
+*Média Marcel Bakayoko  -  Expert géomatique / données géospatiales & agricoles / GeoAI / Suivi-Évaluation*
 
 ## Le problème
 
 L'accès à l'éducation primaire a considérablement progressé en Afrique depuis les années 2000,
-mais les moyennes continentales masquent des écarts considérables — entre pays, entre milieux
+mais les moyennes continentales masquent des écarts considérables  -  entre pays, entre milieux
 urbain et rural, et entre ménages riches et pauvres au sein d'un même pays. Ce projet exploite les
 données ouvertes de la Banque Mondiale et de l'UNESCO pour quantifier précisément ces écarts et
 identifier les facteurs associés au risque d'abandon scolaire.
@@ -14,7 +14,7 @@ identifier les facteurs associés au risque d'abandon scolaire.
 
 53 pays africains, 2005-2022, 861 observations pays-année, construites à partir de 11 indicateurs :
 taux de complétion primaire/secondaire, enfants non scolarisés, redoublement, dépenses publiques
-d'éducation, alphabétisation, et — point central de l'analyse — la complétion primaire désagrégée
+d'éducation, alphabétisation, et  -  point central de l'analyse  -  la complétion primaire désagrégée
 par milieu de résidence (rural/urbain) et par quintile de richesse du ménage.
 
 ## Tendance continentale
@@ -37,7 +37,7 @@ primaire atteint des niveaux considérables dans plusieurs pays :
 - **Maroc** : 63 points
 
 À l'opposé, l'Afrique du Sud (7 points), l'Égypte (10 points), la Tunisie (11 points) et l'Algérie
-(12 points) affichent des écarts beaucoup plus faibles — ces pays ont largement généralisé l'accès
+(12 points) affichent des écarts beaucoup plus faibles  -  ces pays ont largement généralisé l'accès
 au primaire indépendamment du niveau de richesse des ménages. L'écart urbain-rural suit un schéma
 similaire mais moins marqué (jusqu'à 47 points en Angola, contre moins de 4 points en Algérie).
 
@@ -54,13 +54,13 @@ fortement conditionné par le statut socioéconomique du ménage dans une large 
 Un modèle Random Forest atteint une AUC de 0,96 pour prédire un risque élevé d'abandon (complétion
 primaire < 70%) à partir du taux de redoublement, des dépenses publiques d'éducation et de
 l'alphabétisation adulte. **Cependant, cet échantillon ne compte que 69 observations** où toutes
-les variables sont disponibles simultanément — un résultat à interpréter avec prudence (voir
+les variables sont disponibles simultanément  -  un résultat à interpréter avec prudence (voir
 Limites), même si la direction des effets est cohérente avec la littérature.
 
 ![Importance des variables](reports/figures/feature_importance.png)
 
 L'alphabétisation adulte est le facteur le plus discriminant, suivie du taux de redoublement et des
-dépenses publiques d'éducation — un schéma cohérent : le niveau d'éducation des parents (proxy
+dépenses publiques d'éducation  -  un schéma cohérent : le niveau d'éducation des parents (proxy
 indirect de l'alphabétisation adulte nationale) et l'efficacité interne du système scolaire
 (redoublement) sont des déterminants bien documentés de la persistance scolaire.
 
@@ -74,7 +74,7 @@ affichent des taux élevés, tandis qu'une bande sahélienne et centrale concent
 en difficulté : Soudan du Sud (29%), Guinée équatoriale (33%), République Centrafricaine (38%),
 Tchad (42%), Mali (46%).
 
-> Note technique : certains taux dépassent 100% dans les données sources — cela reflète la méthode
+> Note technique : certains taux dépassent 100% dans les données sources  -  cela reflète la méthode
 > de calcul de l'indicateur (nombre d'élèves achevant le dernier grade du primaire rapporté à la
 > population d'âge théorique correspondant), qui peut dépasser 100% en présence d'entrées tardives
 > ou de redoublements comptabilisés dans le numérateur.
@@ -96,16 +96,16 @@ Tchad (42%), Mali (46%).
 
 ## Limites
 
-- L'échantillon de classification (69 observations) est petit — la variance en validation croisée
+- L'échantillon de classification (69 observations) est petit  -  la variance en validation croisée
   (± 0,16 d'AUC) indique une instabilité du modèle qui appelle la prudence dans l'interprétation
   des scores de performance bruts. Les facteurs identifiés (alphabétisation, redoublement) restent
   néanmoins cohérents avec un vaste corpus de recherche en économie de l'éducation.
 - Les données désagrégées (rural/urbain, quintile de richesse) ne sont disponibles que pour un
-  sous-ensemble de pays et d'années — les comparaisons entre pays portent parfois sur des années
+  sous-ensemble de pays et d'années  -  les comparaisons entre pays portent parfois sur des années
   différentes (toujours la plus récente disponible), introduisant un biais temporel potentiel.
-- Les indicateurs utilisés sont agrégés au niveau national — une analyse infranationale (par
+- Les indicateurs utilisés sont agrégés au niveau national  -  une analyse infranationale (par
   région ou district) serait nécessaire pour un ciblage opérationnel précis, dans l'esprit du
   projet complémentaire sur les données démographiques EDS/DHS.
 
 ---
-*Source : World Bank Open Data (EdStats) / UNESCO Institute for Statistics — CC BY 4.0.*
+*Source : World Bank Open Data (EdStats) / UNESCO Institute for Statistics  -  CC BY 4.0.*

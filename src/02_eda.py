@@ -1,5 +1,5 @@
 """
-02_eda.py — Analyse exploratoire des indicateurs d'éducation en Afrique (2005-2022).
+02_eda.py  -  Analyse exploratoire des indicateurs d'éducation en Afrique (2005-2022).
 Sortie : reports/figures/completion_trend.png, distributions.png, correlation_heatmap.png,
          inequality_scatter.png
 """
@@ -27,7 +27,7 @@ def run():
     trend = df.groupby("year")["primary_completion"].mean()
     plt.figure(figsize=(8, 5))
     plt.plot(trend.index, trend.values, marker="o", color="darkorange")
-    plt.title("Taux de complétion du primaire — moyenne Afrique (2005-2022)")
+    plt.title("Taux de complétion du primaire  -  moyenne Afrique (2005-2022)")
     plt.xlabel("Année"); plt.ylabel("Taux de complétion (%)")
     plt.tight_layout()
     plt.savefig(os.path.join(FIG_DIR, "completion_trend.png"), dpi=150)
@@ -43,7 +43,7 @@ def run():
 
     plt.figure(figsize=(8, 6))
     sns.heatmap(df[NUM_COLS].corr(), annot=True, fmt=".2f", cmap="coolwarm", center=0)
-    plt.title("Corrélations — indicateurs d'éducation (Afrique)")
+    plt.title("Corrélations  -  indicateurs d'éducation (Afrique)")
     plt.tight_layout()
     plt.savefig(os.path.join(FIG_DIR, "correlation_heatmap.png"), dpi=150)
     plt.close()
@@ -53,8 +53,8 @@ def run():
     plt.figure(figsize=(7, 7))
     plt.scatter(wealth["primary_completion_q1"], wealth["primary_completion_q5"], alpha=0.6, color="purple")
     plt.plot([0, 100], [0, 100], "k--", label="Égalité parfaite (Q1=Q5)")
-    plt.xlabel("Taux de complétion — quintile le plus pauvre (Q1, %)")
-    plt.ylabel("Taux de complétion — quintile le plus riche (Q5, %)")
+    plt.xlabel("Taux de complétion  -  quintile le plus pauvre (Q1, %)")
+    plt.ylabel("Taux de complétion  -  quintile le plus riche (Q5, %)")
     plt.title("Inégalités socioéconomiques d'achèvement du primaire")
     plt.legend(); plt.tight_layout()
     plt.savefig(os.path.join(FIG_DIR, "inequality_scatter.png"), dpi=150)

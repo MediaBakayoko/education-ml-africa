@@ -1,5 +1,5 @@
 """
-04_inequality_analysis.py — Analyse des inégalités territoriales (rural/urbain) et
+04_inequality_analysis.py  -  Analyse des inégalités territoriales (rural/urbain) et
 socioéconomiques (quintile de richesse) d'achèvement scolaire primaire en Afrique.
 
 Sortie : reports/inequality_summary.txt, reports/figures/inequality_by_country.png,

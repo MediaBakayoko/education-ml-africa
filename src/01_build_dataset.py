@@ -1,5 +1,5 @@
 """
-01_build_dataset.py — Construit le panel pays-année des indicateurs d'éducation pour l'Afrique
+01_build_dataset.py  -  Construit le panel pays-année des indicateurs d'éducation pour l'Afrique
 (World Bank EdStats / UIS), couvrant complétion primaire/secondaire, abandon, répétition,
 dépenses publiques, littératie et disparités rural/urbain et riche/pauvre.
 

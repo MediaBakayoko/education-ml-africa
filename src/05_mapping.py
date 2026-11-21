@@ -1,5 +1,5 @@
 """
-05_mapping.py — Carte du taux de complétion du primaire par pays africain (dernière année
+05_mapping.py  -  Carte du taux de complétion du primaire par pays africain (dernière année
 disponible), pour visualiser les disparités territoriales à l'échelle continentale.
 
 Sortie : reports/maps/primary_completion_map.png, reports/country_summary.csv
@@ -41,14 +41,14 @@ def run():
                 ax.annotate(f"{row['NAME_FR']}\n{row['primary_completion']:.0f}%", (c.x, c.y),
                             fontsize=6.5, fontweight="bold", ha="center", va="center", color="black",
                             bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="none", alpha=0.75))
-        ax.set_title("Taux de complétion du primaire — Afrique (World Bank EdStats)")
+        ax.set_title("Taux de complétion du primaire  -  Afrique (World Bank EdStats)")
         ax.axis("off")
         plt.tight_layout()
         plt.savefig(os.path.join(MAP_DIR, "primary_completion_map.png"), dpi=220, bbox_inches="tight")
         plt.close()
         print(f"Carte sauvegardée : {MAP_DIR}/primary_completion_map.png")
     except Exception as e:
-        print(f"Carte non générée ({e}) — tableau country_summary.csv disponible en alternative.")
+        print(f"Carte non générée ({e})  -  tableau country_summary.csv disponible en alternative.")
 
     return latest
 

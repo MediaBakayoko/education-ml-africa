@@ -35,7 +35,7 @@ accès libre sans inscription.
 - Écart riche-pauvre d'achèvement du primaire allant jusqu'à **71 points de pourcentage**
   (Madagascar), contre moins de 13 points en Afrique du Nord et australe.
 - Classification : AUC=0,96 (test) mais échantillon réduit (69 observations avec toutes les
-  variables disponibles) et forte variance en validation croisée (std=0,16) — résultat
+  variables disponibles) et forte variance en validation croisée (std=0,16)  -  résultat
   informatif mais à interpréter avec prudence (voir Limites).
 - Alphabétisation adulte et taux de redoublement sont les facteurs les plus discriminants.
 - Carte : gradient net Nord/Sud vs bande sahélienne, Soudan du Sud (29%) et Centrafrique (38%)
@@ -56,7 +56,7 @@ Voir [`ARTICLE.md`](ARTICLE.md) pour l'analyse narrative complète avec interpr�
 recommandations.
 
 ## Auteur
-Média Marcel Bakayoko — Expert géomatique / données géospatiales & agricoles / GeoAI / Suivi-Évaluation.
+Média Marcel Bakayoko  -  Expert géomatique / données géospatiales & agricoles / GeoAI / Suivi-Évaluation.
 
 ## Licence des données
-World Bank Open Data / UNESCO Institute for Statistics — CC BY 4.0.
+World Bank Open Data / UNESCO Institute for Statistics  -  CC BY 4.0.

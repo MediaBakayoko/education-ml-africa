@@ -1,5 +1,5 @@
 """
-03_classification.py — Classification du risque d'abandon scolaire (primaire) à l'échelle
+03_classification.py  -  Classification du risque d'abandon scolaire (primaire) à l'échelle
 pays-année, à partir des facteurs de répétition, dépenses d'éducation et littératie.
 
 Cible : "risque élevé" = taux de complétion primaire < 70% (seuil usuel d'alerte UNESCO).
@@ -66,7 +66,7 @@ def run():
 
     plt.plot([0, 1], [0, 1], "k--")
     plt.xlabel("Taux de faux positifs"); plt.ylabel("Taux de vrais positifs")
-    plt.title("Courbes ROC — risque élevé d'abandon scolaire (complétion primaire <70%)")
+    plt.title("Courbes ROC  -  risque élevé d'abandon scolaire (complétion primaire <70%)")
     plt.legend(); plt.tight_layout()
     plt.savefig(os.path.join(FIG_DIR, "roc_curve.png"), dpi=150)
     plt.close()
