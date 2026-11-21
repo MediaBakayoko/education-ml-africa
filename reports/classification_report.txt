@@ -1,0 +1,12 @@
+Seuil 'risque élevé' : taux de complétion primaire < 70%
+
+LogisticRegression: {'AUC_test': np.float64(0.95), 'AUC_cv_mean': np.float64(0.8433333333333334), 'AUC_cv_std': np.float64(0.16110727964792765)}
+RandomForest: {'AUC_test': np.float64(0.9625), 'AUC_cv_mean': np.float64(0.7358333333333332), 'AUC_cv_std': np.float64(0.1582368126855723)}
+
+Meilleur modèle: RandomForest
+
+Facteurs les plus discriminants:
+adult_literacy            0.389785
+repetition_primary        0.286954
+govt_exp_education_gdp    0.193119
+year                      0.130141
