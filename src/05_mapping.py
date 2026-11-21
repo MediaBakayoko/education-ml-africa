@@ -31,7 +31,7 @@ def run():
         africa = world[world["CONTINENT"] == "Africa"]
         merged = africa.merge(latest, left_on="ISO_A3", right_on="country", how="left")
 
-        fig, ax = plt.subplots(figsize=(10, 10))
+        fig, ax = plt.subplots(figsize=(14, 14))
         merged.plot(column="primary_completion", cmap="RdYlGn", legend=True, ax=ax,
                     edgecolor="black", linewidth=0.3, missing_kwds={"color": "lightgrey"},
                     legend_kwds={"label": "Taux de complétion du primaire (%), dernière année", "shrink": 0.6})
@@ -39,11 +39,12 @@ def run():
             if pd.notna(row.get("primary_completion")):
                 c = row.geometry.representative_point()
                 ax.annotate(f"{row['NAME_FR']}\n{row['primary_completion']:.0f}%", (c.x, c.y),
-                            fontsize=4.5, ha="center", va="center", color="black")
+                            fontsize=6.5, fontweight="bold", ha="center", va="center", color="black",
+                            bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="none", alpha=0.75))
         ax.set_title("Taux de complétion du primaire — Afrique (World Bank EdStats)")
         ax.axis("off")
         plt.tight_layout()
-        plt.savefig(os.path.join(MAP_DIR, "primary_completion_map.png"), dpi=200, bbox_inches="tight")
+        plt.savefig(os.path.join(MAP_DIR, "primary_completion_map.png"), dpi=220, bbox_inches="tight")
         plt.close()
         print(f"Carte sauvegardée : {MAP_DIR}/primary_completion_map.png")
     except Exception as e:
