@@ -35,6 +35,11 @@ def run():
         merged.plot(column="primary_completion", cmap="RdYlGn", legend=True, ax=ax,
                     edgecolor="black", linewidth=0.3, missing_kwds={"color": "lightgrey"},
                     legend_kwds={"label": "Taux de complétion du primaire (%), dernière année", "shrink": 0.6})
+        for _, row in merged.iterrows():
+            if pd.notna(row.get("primary_completion")):
+                c = row.geometry.representative_point()
+                ax.annotate(f"{row['NAME_FR']}\n{row['primary_completion']:.0f}%", (c.x, c.y),
+                            fontsize=4.5, ha="center", va="center", color="black")
         ax.set_title("Taux de complétion du primaire — Afrique (World Bank EdStats)")
         ax.axis("off")
         plt.tight_layout()
